@@ -1,0 +1,80 @@
+	cs
+
+to triangle
+  pd
+  seth 90  repeat 3[fd 60 lt 360/3]  seth 90
+end
+
+to 5triangle
+   pd repeat 5[triangle pu fd 90 pd]
+end
+
+;5triangle
+
+to rectangle
+    pd	repeat 2[fd 80 rt 90 fd 40 rt 90]
+end
+
+to 5rectangle
+	pd repeat 5[seth 0 rectangle pu rt 90 fd 90]
+end
+
+to square
+    seth 0	pd repeat 4[fd 50 rt 90]
+end
+
+to 5square
+    repeat 5[square pu seth 90 fd 90]
+end
+
+to position :x :y
+  pu  home  seth 0  fd :y  rt 90  fd :x
+end
+
+to pattern1
+  position 100 200  5triangle  position 100 100 5rectangle  position 100 30
+  5square
+end
+
+to trisquare
+   triangle   pu fd 70  square pu seth 90 fd 70
+end
+
+to pentagon
+	pd	seth 270 repeat 5[fd 50 rt 360/5]
+end
+
+to pentasquaretri
+	pentagon 
+	seth 90 pu fd 30
+	square 
+	pu seth 90 fd 70  
+	triangle
+end
+
+to pattern2
+	repeat 5 [trisquare] pu home
+end
+
+to pattern3
+  repeat 5[trisquare]
+end	
+
+to pattern4
+  repeat 3[pentasquaretri pu fd 130]
+end
+
+to advancedshapes
+	 position 0 0
+	 pattern1
+	 position -700 270
+	 pattern2
+	 position -700 200
+	 pattern3 
+	 position -700 130
+	 pattern3
+	 position -630  45
+	 pattern4
+end 
+
+advancedshapes
