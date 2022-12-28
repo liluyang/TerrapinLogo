@@ -1,0 +1,15 @@
+cs
+pd
+repeat 16[repeat 2[fd 60 rt 90 fd 20 rt 90]rt 360/16]
+rt 90
+pu
+fd 100
+fd 100
+seth 0
+pd
+repeat 4[repeat 2[fd 60 rt 90 fd 20 rt 90]rt 360/4]
+pu
+rt 90 fd 200
+seth 0
+pd
+repeat 10[repeat 3[fd 60 rt 90]rt 360/3]

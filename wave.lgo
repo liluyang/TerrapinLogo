@@ -1,0 +1,24 @@
+TO HALF_CIRCLE :radius
+  seth 90 
+  pd arc 180 :radius 
+  pu 
+  fd 2*:radius
+  seth 270
+  pd arc 180 :radius
+  pu
+  seth 90
+  fd 2*:radius
+END
+
+TO WAVE
+repeat 8[HALF_CIRCLE 20]
+END
+
+cs 
+WAVE  
+home
+bk 50
+WAVE 
+home
+bk 100 
+WAVE

@@ -1,0 +1,19 @@
+repeat 19[triangle rt 360/19]
+rt 90
+fd 200
+seth 90
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

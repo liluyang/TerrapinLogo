@@ -1,0 +1,29 @@
+cs
+
+to triangle :n
+seth 270 repeat 3[fd :n rt 360/3]
+end
+
+
+to pentagon :n
+seth 90 repeat 5[fd :n lt 360/5]
+end
+
+to whatever
+seth 270 pu fd 200 pd
+for [I 10  100 10][ pu  fd 100 pd pentagon :I]
+end
+
+to polygon  :n
+  pd
+  repeat :n[fd 45 rt 360/:n]
+end
+
+
+pu seth 270 fd 300
+for [I 6 20 1][polygon :I seth 270 pu fd 60]
+
+
+	
+
+
