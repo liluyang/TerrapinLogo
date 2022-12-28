@@ -1,0 +1,46 @@
+; Draw a triangle with specified length
+TO TRIANGLE :length
+  pd
+  seth 90 
+  repeat 3[fd :length rt 360/3]
+END
+
+; Draw a rectangle with specified width and height
+TO RECTANGLE :width :height
+  pd
+  seth 0 fd :height
+  rt 90 fd :width
+  rt 90 fd :height
+  rt 90 fd :width
+END
+
+; Draw a pentagon with specified length
+TO PENTAGON :length
+  pd
+  seth 90
+  repeat 5[fd :length lt 360/5]
+END
+
+; Draw a polygon with specified edge-number and length
+; @param n number of edges
+; @param length length of one edge
+TO POLYGON :n :length
+  pd
+  seth 90
+  repeat :n[fd :length rt 360/:n]
+END
+
+; Goto to (x, y)
+TO POSITION :x :y
+  pu
+  home
+  seth 0
+  fd :y
+  seth 90
+  fd :x
+END
+
+
+	
+
+
